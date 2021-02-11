@@ -40,7 +40,7 @@ if __name__ == "__main__":
 	# Rin subreddit
 	subr = reddit.subreddit("OneTrueTohsaka")
 
-	for submission in subr.top("all"):
+	for submission in subr.top("all", limit=None):
 		# Save image to file in ftp
 		save_file(ftp, submission.url, submission.url.split("/")[-1])
 
